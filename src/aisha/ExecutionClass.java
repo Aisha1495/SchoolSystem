@@ -166,25 +166,31 @@ public class ExecutionClass {
 				System.out.println();
 				System.out.println("School Name:" + sch.getNameOfSchool());
 				System.out.println();
+				
+				for (int i = 0; i < departmentList.size(); i++) {
 
-				for (Department dep1 : departmentList) {
-					System.out.println("Department Name:" + dep1.getNameOfDep());
-					System.out.println("Department id:" + dep1.getDepNum());
+				//for (Department dep1 : departmentList) {
+					System.out.println("Department Name:" + dep.getNameOfDep());
+					System.out.println("Department id:" + dep.getDepNum());
 
-					for (Teacher tech1 : dep1.TeacherList) {
-						System.out.println("Teacher Name: " + tech1.getTeachName());
-						System.out.println("Teacher id: " + tech1.getTeachId());
+					for (int j = 0; j < dep.getTeacherList().size(); j++) {
+					//for (Teacher tech1 : dep1.TeacherList) {
+						System.out.println("Teacher Name: " + dep.tech.getTeachName());
+						System.out.println("Teacher id: " + dep.tech.getTeachId());
 
-						for (Student stud1 : dep1.tech.StudList) {
-							System.out.println("Student Name: " + stud1.getStudName());
-							System.out.println("Student id: " + stud1.getStudId());
+						for (int t = 0; t < dep.tech.getStudList().size(); t++) {
+						//for (Student stud1 : dep1.tech.StudList) {
+							System.out.println("Student Name: " + dep.tech.stud.getStudName());
+							System.out.println("Student id: " + dep.tech.stud.getStudId());
 
-							for (Courses cour1 : dep1.tech.stud.CoursList) {
-								System.out.println("Course Name: " + cour1.getCourName());
-								System.out.println("Course id: " + cour1.getCourId());
+							for (int d = 0; d < dep.tech.stud.getCoursList().size(); d++) {
+							//for (Courses cour1 : dep1.tech.stud.CoursList) {
+								System.out.println("Course Name: " + dep.tech.stud.cour.getCourName());
+								System.out.println("Course id: " + dep.tech.stud.cour.getCourId());
 
-								for (Marks mark1 : dep1.tech.stud.cour.markList) {
-									System.out.println("Supject & Marks Grade : " + mark1.grade);
+								for (int a = 0; a < dep.tech.stud.cour.getMarkList().size(); a++) {
+								//for (Marks mark1 : dep1.tech.stud.cour.markList) {
+									System.out.println("Supject & Marks Grade : " + dep.tech.stud.cour.mark.grade);
 									System.out.println();
 									System.out.println();
 								}
