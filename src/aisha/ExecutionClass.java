@@ -48,8 +48,8 @@ public class ExecutionClass {
 				Teacher tech = new Teacher();
 				departmentList.get(depListIndex).TeacherList.add(tech);
 				System.out.println("Enter Teacher Name:  ");
-				String techName = sc.next();
-				departmentList.get(depListIndex).TeacherList.get(techListIndex).setTeachName(techName);
+			//	String techName = sc.next();
+				departmentList.get(depListIndex).TeacherList.get(techListIndex).setTeachName(sc.next());
 				//tech.setTeachName(techName);
 
 				System.out.println("Enter Teacher id:  ");
@@ -58,16 +58,16 @@ public class ExecutionClass {
 				//tech.setTeachId(techId);
 
 				System.out.println("Do you want to Enter Other Teacher? (yes/no):  ");
-				String answer1 = sc.next();
+			//	String answer1 = sc.next();
 				dep.TeacherList.add(tech);
-				if (answer1.equals("yes")) {
+				if (sc.next().equals("yes")) {
 					System.out.println("Next Teacher:");
 					addTeacher = true;
 					techListIndex++;
 					
 				
 
-				} else if (answer1.equals("no")) {
+				} else if (sc.next().equals("no")) {
 					addTeacher = false;
 					System.out.println("Student:");
 					break;
@@ -108,8 +108,8 @@ public class ExecutionClass {
 					
 					
 
-				}
-				}
+				}}
+				
 
 			
 
@@ -143,9 +143,9 @@ public class ExecutionClass {
 					System.out.println("Supject with Mark:");
 					break;
 
-				}
+				
 
-			}
+			}}
 			int markListIndex=0;
 			boolean addMark = true;
 			while (addMark) {
@@ -192,7 +192,8 @@ public class ExecutionClass {
 				System.out.println("Next Department");
 			} else if (answer10.equals("no")) {
 				addDepartment = false;
-			
+			}
+			}
 			
 				// break;
 				System.out.println("Thanks");
@@ -248,5 +249,5 @@ public class ExecutionClass {
 			}
 		}
 	
-	}}
+	
 	
