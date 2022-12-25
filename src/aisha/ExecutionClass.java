@@ -19,7 +19,7 @@ public class ExecutionClass {
 		boolean addDepartment = true;
 	
 		
-		Scanner sc = new Scanner(System.in); // TODO: Find out what is System.in
+		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Enter School Name:  ");
 		String schoolName = sc.next();
