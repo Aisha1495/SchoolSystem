@@ -17,10 +17,9 @@ public class ExecutionClass {
 //		Courses cours = new Courses();
 		List<Department> departmentList = new ArrayList<>();
 		boolean addDepartment = true;
-	
-		
+
 		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.println("Enter School Name:  ");
 		String schoolName = sc.next();
 		sch.setNameOfSchool(schoolName);
@@ -166,31 +165,42 @@ public class ExecutionClass {
 				System.out.println();
 				System.out.println("School Name:" + sch.getNameOfSchool());
 				System.out.println();
-				
+
 				for (int i = 0; i < departmentList.size(); i++) {
+					//departmentList.get(i).getDepNum();
+					// for (Department dep1 : departmentList) {
+					System.out.println("Department Name:" + departmentList.get(i).getNameOfDep());
+					System.out.println("Department id:" + departmentList.get(i).getDepNum());
 
-				//for (Department dep1 : departmentList) {
-					System.out.println("Department Name:" + dep.getNameOfDep());
-					System.out.println("Department id:" + dep.getDepNum());
+					for (int j = 0; j < departmentList.get(i).getTeacherList().size(); j++) {
+						// for (Teacher tech1 : dep1.TeacherList) {
+						System.out.println("Teacher Name: " + departmentList.get(i).TeacherList.get(j).getTeachName());
+						System.out.println("Teacher id: " + departmentList.get(i).TeacherList.get(j).getTeachId());
+						
+						//departmentList.get(i).TeacherList.get(j).StudList.size();
+						for (int t = 0; t < departmentList.get(i).TeacherList.get(j).StudList.size(); t++) {
+							// for (Student stud1 : dep1.tech.StudList) {
+							System.out.println("Student Name: "
+									+ departmentList.get(i).TeacherList.get(j).StudList.get(t).getStudName());
+							System.out.println("Student id: "
+									+ departmentList.get(i).TeacherList.get(j).StudList.get(t).getStudId());
 
-					for (int j = 0; j < dep.getTeacherList().size(); j++) {
-					//for (Teacher tech1 : dep1.TeacherList) {
-						System.out.println("Teacher Name: " + dep.tech.getTeachName());
-						System.out.println("Teacher id: " + dep.tech.getTeachId());
+							for (int d = 0; d < departmentList.get(i).TeacherList.get(j).StudList.get(t).getCoursList()
+									.size(); d++) {
+								// for (Courses cour1 : dep1.tech.stud.CoursList) {
+								System.out.println("Course Name: "
+										+ departmentList.get(i).TeacherList.get(j).StudList.get(t).CoursList.get(d)
+												.getCourName());
+								System.out.println("Course id: "
+										+ departmentList.get(i).TeacherList.get(j).StudList.get(t).CoursList.get(d)
+												.getCourId());
 
-						for (int t = 0; t < dep.tech.getStudList().size(); t++) {
-						//for (Student stud1 : dep1.tech.StudList) {
-							System.out.println("Student Name: " + dep.tech.stud.getStudName());
-							System.out.println("Student id: " + dep.tech.stud.getStudId());
-
-							for (int d = 0; d < dep.tech.stud.getCoursList().size(); d++) {
-							//for (Courses cour1 : dep1.tech.stud.CoursList) {
-								System.out.println("Course Name: " + dep.tech.stud.cour.getCourName());
-								System.out.println("Course id: " + dep.tech.stud.cour.getCourId());
-
-								for (int a = 0; a < dep.tech.stud.cour.getMarkList().size(); a++) {
-								//for (Marks mark1 : dep1.tech.stud.cour.markList) {
-									System.out.println("Supject & Marks Grade : " + dep.tech.stud.cour.mark.grade);
+								for (int a = 0; a < departmentList.get(i).TeacherList.get(j).StudList.get(t).CoursList
+										.get(d).getMarkList().size(); a++) {
+									// for (Marks mark1 : dep1.tech.stud.cour.markList) {
+									System.out.println("Supject & Marks Grade : "
+											+ departmentList.get(i).TeacherList.get(j).StudList.get(t).CoursList
+													.get(d).markList.get(a).grade);
 									System.out.println();
 									System.out.println();
 								}
