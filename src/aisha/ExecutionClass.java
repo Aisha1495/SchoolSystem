@@ -175,15 +175,15 @@ public class ExecutionClass {
 						System.out.println("Teacher Name: " + tech1.getTeachName());
 						System.out.println("Teacher id: " + tech1.getTeachId());
 
-						for (Student stud1 : tech1.StudList) {
+						for (Student stud1 : dep1.tech.StudList) {
 							System.out.println("Student Name: " + stud1.getStudName());
 							System.out.println("Student id: " + stud1.getStudId());
 
-							for (Courses cour1 : stud1.CoursList) {
+							for (Courses cour1 : dep1.tech.stud.CoursList) {
 								System.out.println("Course Name: " + cour1.getCourName());
 								System.out.println("Course id: " + cour1.getCourId());
 
-								for (Marks mark1 : cour1.markList) {
+								for (Marks mark1 : dep1.tech.stud.cour.markList) {
 									System.out.println("Supject & Marks Grade : " + mark1.grade);
 									System.out.println();
 									System.out.println();
