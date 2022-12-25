@@ -1,0 +1,40 @@
+package aisha;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Student {
+
+	private String studName;
+	private int studId;
+	Courses cour = new Courses();
+	
+	ArrayList<Courses> CoursList=new ArrayList<Courses>();
+	
+	
+	public ArrayList<Courses> getCoursList() {
+		return CoursList;
+	}
+
+	public void setCoursList(ArrayList<Courses> coursList) {
+		CoursList = coursList;
+	}
+
+	public int getStudId() {
+		return studId;
+	}
+
+	public void setStudId(int studId) {
+		this.studId = studId;
+	}
+
+
+	public String getStudName() {
+		return studName;
+	}
+
+	public void setStudName(String studName) {
+		this.studName = studName;
+	}
+}
