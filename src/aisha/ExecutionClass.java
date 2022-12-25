@@ -9,7 +9,7 @@ public class ExecutionClass {
 
 	public static void main(String[] arg) {
 
-		School sch = new School();
+		School sch = new School("Muscat");
 //		Department dep = new Department();
 //		Teacher teach = new Teacher();
 //		Student stud = new Student();
@@ -20,10 +20,10 @@ public class ExecutionClass {
 	
 		
 		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("Enter School Name:  ");
-		String schoolName = sc.next();
-		sch.setNameOfSchool(schoolName);
+//		
+//		System.out.println("Enter School Name:  ");
+//		String schoolName = sc.next();
+//		sch.setNameOfSchool(schoolName);
 
 		while (addDepartment) {
 
