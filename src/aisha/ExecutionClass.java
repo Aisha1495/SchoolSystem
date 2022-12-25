@@ -9,7 +9,7 @@ public class ExecutionClass {
 
 	public static void main(String[] arg) {
 
-		School sch = new School("Muscat");
+		School sch = new School("Muscat School" , "Bushar");
 //		Department dep = new Department();
 //		Teacher teach = new Teacher();
 //		Student stud = new Student();

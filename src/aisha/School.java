@@ -5,8 +5,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class School {
-	School(String name){
+	School(String name , String Location){
 		System.out.println(name);
+		System.out.println(Location);
 	}
 
 	private String nameOfSchool;
