@@ -20,7 +20,8 @@ public class ExecutionClass {
 	
 		
 		Scanner sc = new Scanner(System.in);
-//		
+		
+		
 //		System.out.println("Enter School Name:  ");
 //		String schoolName = sc.next();
 //		sch.setNameOfSchool(schoolName);
@@ -164,29 +165,40 @@ public class ExecutionClass {
 				System.out.println("Thanks");
 				System.out.println("**************************");
 				System.out.println();
-				System.out.println("School Name:" + sch.getNameOfSchool());
+				
+				System.out.println(sch); // check no print
 				System.out.println();
+				//    System.out.println("School Name:" + sch.getNameOfSchool());
+			
 
 				for (Department dep1 : departmentList) {
+					System.out.println("___________________________");
+					System.out.println();
 					System.out.println("Department Name:" + dep1.getNameOfDep());
 					System.out.println("Department id:" + dep1.getDepNum());
+					System.out.println();
+					System.out.println("___________________________");
+					System.out.println();
 
 					for (Teacher tech1 : dep1.TeacherList) {
 						System.out.println("Teacher Name: " + tech1.getTeachName());
 						System.out.println("Teacher id: " + tech1.getTeachId());
+						System.out.println();
 
 						for (Student stud1 : dep1.tech.StudList) {
 							System.out.println("Student Name: " + stud1.getStudName());
 							System.out.println("Student id: " + stud1.getStudId());
+							System.out.println();
 
 							for (Courses cour1 : dep1.tech.stud.CoursList) {
 								System.out.println("Course Name: " + cour1.getCourName());
 								System.out.println("Course id: " + cour1.getCourId());
+								System.out.println();
 
 								for (Marks mark1 : dep1.tech.stud.cour.markList) {
-									System.out.println("Supject & Marks Grade : " + mark1.grade);
+									System.out.println("The Grade : " + mark1.grade);
 									System.out.println();
-									System.out.println();
+								
 								}
 							}
 
