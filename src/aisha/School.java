@@ -5,13 +5,19 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class School {
-	School(String name , String Location){
-		System.out.println(name);
-		System.out.println(Location);
-	}
+	
 
 	private String nameOfSchool;
 	private String location;
+	
+	School(String name , String Location){
+		System.out.println(name);
+		System.out.println(Location);
+		this.nameOfSchool=name;
+		this.location=Location;
+	}
+	
+
 	int schoolId;
 
 	ArrayList<Department> departmentName = new ArrayList<Department>();

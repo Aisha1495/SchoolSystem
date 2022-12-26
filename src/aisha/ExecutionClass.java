@@ -1,15 +1,20 @@
 package aisha;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+
 import java.util.List;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class ExecutionClass {
 
 	public static void main(String[] arg) {
 
-		School sch = new School("Muscat School" , "Bushar");
+		// System.out.println("History of School Location is: " + schLocation);
+
+		Stack <String> stk = new Stack<String>();
+
+		School sch = new School("Muscat School", "Bushar");
 //		Department dep = new Department();
 //		Teacher teach = new Teacher();
 //		Student stud = new Student();
@@ -17,11 +22,9 @@ public class ExecutionClass {
 //		Courses cours = new Courses();
 		List<Department> departmentList = new ArrayList<>();
 		boolean addDepartment = true;
-	
-		
+
 		Scanner sc = new Scanner(System.in);
-		
-		
+
 //		System.out.println("Enter School Name:  ");
 //		String schoolName = sc.next();
 //		sch.setNameOfSchool(schoolName);
@@ -101,6 +104,8 @@ public class ExecutionClass {
 				System.out.println("Enter Course Name:  ");
 				String courName = sc.next();
 				cour.setCourName(courName);
+				
+				stk.push(courName); // stack
 
 				System.out.println("Enter Course id:  ");
 				int courId = sc.nextInt();
@@ -112,7 +117,10 @@ public class ExecutionClass {
 				if (answer3.equals("yes")) {
 					System.out.println("Next Course:");
 					addCourse = true;
+					
+					
 
+					
 				} else if (answer3.equals("no")) {
 					addCourse = false;
 					System.out.println("Supject with Mark:");
@@ -143,11 +151,14 @@ public class ExecutionClass {
 				if (answer4.equals("yes")) {
 					System.out.println("Next Student Mark:");
 					addMark = true;
+					
+					
+
 				} else if (answer4.equals("no")) {
 					addMark = false;
 					System.out.println("end:");
 					break;
-
+					 
 				}
 
 			}
@@ -163,13 +174,16 @@ public class ExecutionClass {
 
 				// break;
 				System.out.println("Thanks");
+
 				System.out.println("**************************");
+
 				System.out.println();
-				
-				System.out.println(sch); // check no print
+
+				System.out.println(sch.getNameOfSchool());
+				System.out.println(sch.getLocation());
 				System.out.println();
-				//    System.out.println("School Name:" + sch.getNameOfSchool());
-			
+
+				// System.out.println("School Name:" + sch.getNameOfSchool());
 
 				for (Department dep1 : departmentList) {
 					System.out.println("___________________________");
@@ -198,7 +212,7 @@ public class ExecutionClass {
 								for (Marks mark1 : dep1.tech.stud.cour.markList) {
 									System.out.println("The Grade : " + mark1.grade);
 									System.out.println();
-								
+
 								}
 							}
 
@@ -208,5 +222,17 @@ public class ExecutionClass {
 				}
 			}
 		}
+		System.out.println("Do you want to add history to Course (yes/no) ");
+		String answer11 = sc.next();
+		if (answer11.equals("yes")) {
+			for (int ii = 0; ii <= stk.size(); ii++) {
+				System.out.println(stk.pop());
+			}	
+
+		} else {
+
+			System.out.println("Bye No History");
+		}
 	}
 }
+
