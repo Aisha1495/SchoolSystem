@@ -1,5 +1,7 @@
 package aisha;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import java.util.List;
@@ -10,9 +12,14 @@ public class ExecutionClass {
 
 	public static void main(String[] arg) {
 
+
+		
+		
 		// System.out.println("History of School Location is: " + schLocation);
 
 		Stack <String> stk = new Stack<String>();
+
+		
 
 		School sch = new School("Muscat School", "Bushar");
 //		Department dep = new Department();
@@ -20,6 +27,8 @@ public class ExecutionClass {
 //		Student stud = new Student();
 //		Marks mark = new Marks();
 //		Courses cours = new Courses();
+		FileReport file1 = new FileReport();
+		
 		List<Department> departmentList = new ArrayList<>();
 		boolean addDepartment = true;
 
@@ -28,7 +37,13 @@ public class ExecutionClass {
 //		System.out.println("Enter School Name:  ");
 //		String schoolName = sc.next();
 //		sch.setNameOfSchool(schoolName);
-
+//		 try {
+//		      FileWriter myWriter = new FileWriter("C:FileExample.txt");
+//		      myWriter.write("Files in Java might be tricky, but it is fun enough!");
+//		     
+		      
+		
+			
 		while (addDepartment) {
 
 			Department dep = new Department();
@@ -49,6 +64,8 @@ public class ExecutionClass {
 				System.out.println("Enter Teacher Name:  ");
 				String techName = sc.next();
 				tech.setTeachName(techName);
+				
+				//stk.push(techName);
 
 				System.out.println("Enter Teacher id:  ");
 				int techId = sc.nextInt();
@@ -182,9 +199,12 @@ public class ExecutionClass {
 				System.out.println(sch.getNameOfSchool());
 				System.out.println(sch.getLocation());
 				System.out.println();
+				
+				
 
 				// System.out.println("School Name:" + sch.getNameOfSchool());
-
+				
+				
 				for (Department dep1 : departmentList) {
 					System.out.println("___________________________");
 					System.out.println();
@@ -213,6 +233,8 @@ public class ExecutionClass {
 									System.out.println("The Grade : " + mark1.grade);
 									System.out.println();
 
+									
+								
 								}
 							}
 
@@ -222,7 +244,7 @@ public class ExecutionClass {
 				}
 			}
 		}
-		System.out.println("Do you want to add history to Course (yes/no) ");
+		System.out.println("Do you want to check the history of Course (yes/no) ");
 		String answer11 = sc.next();
 		if (answer11.equals("yes")) {
 			for (int ii = 0; ii <= stk.size(); ii++) {
@@ -231,8 +253,11 @@ public class ExecutionClass {
 
 		} else {
 
-			System.out.println("Bye No History");
+			System.out.println("No History , Thank you have a nice day");
+			
+			
 		}
+		
 	}
 }
 
