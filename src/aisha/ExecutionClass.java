@@ -10,16 +10,9 @@ import java.util.Stack;
 
 public class ExecutionClass {
 
-	public static void main(String[] arg) {
+	public static void main(String[] arg) throws IOException {
 
-
-		
-		
-		// System.out.println("History of School Location is: " + schLocation);
-
-		Stack <String> stk = new Stack<String>();
-
-		
+		Stack<String> stk = new Stack<String>();
 
 		School sch = new School("Muscat School", "Bushar");
 //		Department dep = new Department();
@@ -27,8 +20,7 @@ public class ExecutionClass {
 //		Student stud = new Student();
 //		Marks mark = new Marks();
 //		Courses cours = new Courses();
-		FileReport file1 = new FileReport();
-		
+
 		List<Department> departmentList = new ArrayList<>();
 		boolean addDepartment = true;
 
@@ -37,13 +29,8 @@ public class ExecutionClass {
 //		System.out.println("Enter School Name:  ");
 //		String schoolName = sc.next();
 //		sch.setNameOfSchool(schoolName);
-//		 try {
-//		      FileWriter myWriter = new FileWriter("C:FileExample.txt");
-//		      myWriter.write("Files in Java might be tricky, but it is fun enough!");
-//		     
-		      
-		
-			
+		FileWriter myWriter = new FileWriter("C:\\Users\\Lenovo\\eclipse-workspace\\aisha\\FileExample.txt");
+
 		while (addDepartment) {
 
 			Department dep = new Department();
@@ -64,8 +51,8 @@ public class ExecutionClass {
 				System.out.println("Enter Teacher Name:  ");
 				String techName = sc.next();
 				tech.setTeachName(techName);
-				
-				//stk.push(techName);
+
+				// stk.push(techName);
 
 				System.out.println("Enter Teacher id:  ");
 				int techId = sc.nextInt();
@@ -121,7 +108,7 @@ public class ExecutionClass {
 				System.out.println("Enter Course Name:  ");
 				String courName = sc.next();
 				cour.setCourName(courName);
-				
+
 				stk.push(courName); // stack
 
 				System.out.println("Enter Course id:  ");
@@ -134,10 +121,7 @@ public class ExecutionClass {
 				if (answer3.equals("yes")) {
 					System.out.println("Next Course:");
 					addCourse = true;
-					
-					
 
-					
 				} else if (answer3.equals("no")) {
 					addCourse = false;
 					System.out.println("Supject with Mark:");
@@ -168,14 +152,12 @@ public class ExecutionClass {
 				if (answer4.equals("yes")) {
 					System.out.println("Next Student Mark:");
 					addMark = true;
-					
-					
 
 				} else if (answer4.equals("no")) {
 					addMark = false;
 					System.out.println("end:");
 					break;
-					 
+
 				}
 
 			}
@@ -190,6 +172,7 @@ public class ExecutionClass {
 				addDepartment = false;
 
 				// break;
+
 				System.out.println("Thanks");
 
 				System.out.println("**************************");
@@ -199,65 +182,74 @@ public class ExecutionClass {
 				System.out.println(sch.getNameOfSchool());
 				System.out.println(sch.getLocation());
 				System.out.println();
-				
-				
 
 				// System.out.println("School Name:" + sch.getNameOfSchool());
-				
-				
+
 				for (Department dep1 : departmentList) {
 					System.out.println("___________________________");
 					System.out.println();
 					System.out.println("Department Name:" + dep1.getNameOfDep());
+					myWriter.write("Department Name: " + dep1.getNameOfDep()+"\n");
 					System.out.println("Department id:" + dep1.getDepNum());
 					System.out.println();
 					System.out.println("___________________________");
 					System.out.println();
 
 					for (Teacher tech1 : dep1.TeacherList) {
+						
 						System.out.println("Teacher Name: " + tech1.getTeachName());
+						myWriter.write("Teacher Name: " + tech1.getTeachName() +"\n");
 						System.out.println("Teacher id: " + tech1.getTeachId());
+						myWriter.write("Teacher id: " + tech1.getTeachId() +"\n");
 						System.out.println();
 
 						for (Student stud1 : dep1.tech.StudList) {
 							System.out.println("Student Name: " + stud1.getStudName());
+							myWriter.write("Student Name: " + stud1.getStudName()+"\n");
 							System.out.println("Student id: " + stud1.getStudId());
+							myWriter.write("Student id: " + stud1.getStudId()+"\n");
 							System.out.println();
 
 							for (Courses cour1 : dep1.tech.stud.CoursList) {
 								System.out.println("Course Name: " + cour1.getCourName());
+								myWriter.write("Course Name: " + cour1.getCourName()+"\n");
 								System.out.println("Course id: " + cour1.getCourId());
+								myWriter.write("Course id: " + cour1.getCourId()+"\n");
 								System.out.println();
 
 								for (Marks mark1 : dep1.tech.stud.cour.markList) {
 									System.out.println("The Grade : " + mark1.grade);
+									myWriter.write("The Grade  : " + mark1.grade+"\n");
 									System.out.println();
-
+                                         
 									
-								
+									//check
+									myWriter.close();
+
 								}
 							}
 
 						}
-					}
 
+					}
 				}
+
 			}
+
 		}
+
 		System.out.println("Do you want to check the history of Course (yes/no) ");
 		String answer11 = sc.next();
 		if (answer11.equals("yes")) {
 			for (int ii = 0; ii <= stk.size(); ii++) {
 				System.out.println(stk.pop());
-			}	
+			}
 
 		} else {
 
 			System.out.println("No History , Thank you have a nice day");
-			
-			
 		}
-		
-	}
-}
 
+	}
+
+}
