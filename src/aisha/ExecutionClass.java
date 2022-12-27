@@ -186,14 +186,20 @@ public class ExecutionClass {
 				// System.out.println("School Name:" + sch.getNameOfSchool());
 
 				for (Department dep1 : departmentList) {
-					System.out.println("___________________________");
+					System.out.println("___________________________"+ "\n");
+					myWriter.write("___________________________"+"\n");
 					System.out.println();
+					myWriter.write("\n");
 					System.out.println("Department Name:" + dep1.getNameOfDep());
 					myWriter.write("Department Name: " + dep1.getNameOfDep()+"\n");
 					System.out.println("Department id:" + dep1.getDepNum());
+					myWriter.write("Department id: " + dep1.getDepNum()+"\n" + "\n");
 					System.out.println();
+					myWriter.write("\n");
 					System.out.println("___________________________");
+					myWriter.write("___________________________");
 					System.out.println();
+					myWriter.write("\n");
 
 					for (Teacher tech1 : dep1.TeacherList) {
 						
@@ -202,6 +208,7 @@ public class ExecutionClass {
 						System.out.println("Teacher id: " + tech1.getTeachId());
 						myWriter.write("Teacher id: " + tech1.getTeachId() +"\n");
 						System.out.println();
+						myWriter.write("\n");
 
 						for (Student stud1 : dep1.tech.StudList) {
 							System.out.println("Student Name: " + stud1.getStudName());
@@ -209,6 +216,7 @@ public class ExecutionClass {
 							System.out.println("Student id: " + stud1.getStudId());
 							myWriter.write("Student id: " + stud1.getStudId()+"\n");
 							System.out.println();
+							myWriter.write("\n");
 
 							for (Courses cour1 : dep1.tech.stud.CoursList) {
 								System.out.println("Course Name: " + cour1.getCourName());
@@ -216,15 +224,17 @@ public class ExecutionClass {
 								System.out.println("Course id: " + cour1.getCourId());
 								myWriter.write("Course id: " + cour1.getCourId()+"\n");
 								System.out.println();
+								myWriter.write("\n");
 
 								for (Marks mark1 : dep1.tech.stud.cour.markList) {
 									System.out.println("The Grade : " + mark1.grade);
 									myWriter.write("The Grade  : " + mark1.grade+"\n");
 									System.out.println();
+									myWriter.write("\n");
                                          
 									
 									//check
-									myWriter.close();
+									//myWriter.close();
 
 								}
 							}
@@ -233,11 +243,12 @@ public class ExecutionClass {
 
 					}
 				}
-
+				
 			}
 
 		}
-
+		myWriter.close();
+		
 		System.out.println("Do you want to check the history of Course (yes/no) ");
 		String answer11 = sc.next();
 		if (answer11.equals("yes")) {
@@ -251,5 +262,6 @@ public class ExecutionClass {
 		}
 
 	}
-
+	
 }
+
