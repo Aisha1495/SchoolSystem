@@ -8,7 +8,7 @@ public class Student {
 
 	private String studName;
 	private int studId;
-	Courses cour = new Courses();
+	Courses cours = new Courses();
 	
 	ArrayList<Courses> CoursList=new ArrayList<Courses>();
 	

@@ -1,8 +1,10 @@
 package aisha;
 
+
 import java.util.ArrayList;
 
-public class Courses {
+public class Courses  {
+
 
 	private String courName;
 	private int courId;

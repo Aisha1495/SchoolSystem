@@ -1,9 +1,11 @@
 package aisha;
 
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Department {
+public class Department implements Serializable {
 
 	private String nameOfDep;
 	private int depNum;
