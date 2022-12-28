@@ -1,10 +1,11 @@
 package aisha;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Teacher {
+public class Teacher implements Serializable{
 
 	private String teachName;
 	private int teachId;

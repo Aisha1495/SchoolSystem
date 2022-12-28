@@ -5,9 +5,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 //import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 import java.nio.file.Files;
 
-public class FileReport {
+public class FileReport implements Serializable {
 
 	public static void main(String args[])  throws IOException{
 		try {

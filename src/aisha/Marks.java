@@ -3,7 +3,7 @@ package aisha;
 import java.io.Serializable;
 import java.util.Scanner;
 
-public class Marks  {
+public class Marks implements Serializable {
 	private String SupjMark;
 	private float Mark;
 	char grade;

@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class ExecutionClass {
 		Stack<String> stk = new Stack<String>();
 
 		School sch = new School("Muscat School", "Bushar");
-	//	Department dep = new Department();
+//		Department dep = new Department();
 //		Teacher tech = new Teacher();
 //		Student stud = new Student();
 //		Marks mark = new Marks();
@@ -44,31 +45,8 @@ public class ExecutionClass {
 
 		 Department dep = new Department();
 		 
-		// save obj into file 
 		 
-			 FileOutputStream f = new FileOutputStream(
-						new File("C:\\Users\\Lenovo\\eclipse-workspace\\aisha\\objExample.txt"));
-				ObjectOutputStream o = new ObjectOutputStream(f);
-
-				// Write objects to file
-				o.writeObject(dep);
-
-				o.close();
-				f.close();
-
-				FileInputStream fi = new FileInputStream(
-						new File("C:\\Users\\Lenovo\\eclipse-workspace\\aisha\\objExample.txt"));
-				ObjectInputStream oi = new ObjectInputStream(fi);
-
-				// Read objects
-				Department pr1 = (Department) oi.readObject();
-				pr1.setNameOfDep("Math Department");
-				System.out.println(pr1.getNameOfDep());
-
-				oi.close();
-				fi.close();
-			
-		 
+		 // save obj into file 
 	
 		System.out.println("Enter Department Name:  ");
 		String depName = sc.next();
@@ -111,6 +89,30 @@ public class ExecutionClass {
 		boolean addStudent = true;
 		while (addStudent) {
 			 Student stud = new Student();
+			 
+
+			 FileOutputStream f = new FileOutputStream(
+						new File("C:\\Users\\Lenovo\\eclipse-workspace\\aisha\\objExample.txt"));
+				ObjectOutputStream o = new ObjectOutputStream(f);
+
+				// Write objects to file
+				o.writeObject(stud);
+
+				o.close();
+				f.close();
+
+				FileInputStream fi = new FileInputStream(
+						new File("C:\\Users\\Lenovo\\eclipse-workspace\\aisha\\objExample.txt"));
+				ObjectInputStream oi = new ObjectInputStream(fi);
+
+				// Read objects
+				Student pr1 = (Student) oi.readObject();
+				pr1.setStudName("Aisha");
+				System.out.println(pr1.getStudName());
+
+				oi.close();
+				fi.close();
+				
 
 			System.out.println("Enter Student Name:  ");
 			String studName = sc.next();

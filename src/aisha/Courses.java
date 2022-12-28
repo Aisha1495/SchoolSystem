@@ -1,9 +1,10 @@
 package aisha;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Courses  {
+public class Courses implements Serializable  {
 
 
 	private String courName;
