@@ -1,6 +1,6 @@
 package aisha;
 
-public class format {
+public class format { // Make this class static
 	
 	format(){
 		System.out.println("School System");
