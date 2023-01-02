@@ -14,10 +14,11 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class ExecutionClass  {
+public class ExecutionClass implements Interface1 {
 
 	public static void main(String[] arg) throws IOException, ClassNotFoundException {
-		
+	
+		Interface1.show();	
 
 		Stack<String> stk = new Stack<String>();
 

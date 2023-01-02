@@ -14,5 +14,34 @@ Student id: 1
 Course Name: 1
 Course id: 1
 
-The Grade is  : A
+The Grade is  : D
+
+The Grade is  : D
+
+Course Name: 7
+Course id: 7
+
+The Grade is  : D
+
+The Grade is  : D
+
+Teacher Name: 2
+Teacher id: 2
+
+Student Name: 1
+Student id: 1
+
+Course Name: 1
+Course id: 1
+
+The Grade is  : D
+
+The Grade is  : D
+
+Course Name: 7
+Course id: 7
+
+The Grade is  : D
+
+The Grade is  : D
 
