@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Student implements Serializable {
 
 	private String studName;
-	private int studId;
+	private Integer studId;
 	Courses cours = new Courses();
 	
 	//ArrayList<Courses> CoursList=new ArrayList<Courses>();

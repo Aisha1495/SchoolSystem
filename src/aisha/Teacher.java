@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Teacher implements Serializable{
 
 	private String teachName;
-	private int teachId;
+	private Integer teachId;
 
 	Student stud = new Student();
 	

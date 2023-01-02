@@ -14,9 +14,11 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class ExecutionClass {
+public class ExecutionClass  {
 
 	public static void main(String[] arg) throws IOException, ClassNotFoundException {
+		
+		
 
 		Stack<String> stk = new Stack<String>();
 
@@ -39,6 +41,8 @@ public class ExecutionClass {
 
 
 	
+		
+		
 	FileWriter myWriter = new FileWriter("C:\\Users\\Lenovo\\eclipse-workspace\\aisha\\FileExample.txt");
 	
 	while(addDepartment){
@@ -215,6 +219,11 @@ public class ExecutionClass {
 		} else if (answer10.equals("no")) {
 			addDepartment = false;//''''''''
 
+			
+		
+			
+			
+			
 			// break;
 
 			System.out.println("Thanks");
@@ -277,6 +286,7 @@ public class ExecutionClass {
 								myWriter.write("\n");
 
 							}
+							
 						}
 
 					}
@@ -287,7 +297,8 @@ public class ExecutionClass {
 		}
 
 	}
-
+	
+	
 		System.out.println("Do you want to check the history of Course (yes/no) ");
 		String answer11 = sc.next();
 		if (answer11.equals("yes")) {

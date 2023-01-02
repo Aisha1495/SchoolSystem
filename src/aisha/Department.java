@@ -5,8 +5,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Department implements Serializable {
+public class Department implements Serializable , Interface123 {
 
+	 public void show() {}
+	
     private String nameOfDep;
     private Integer depNum; // int vs Integer
 
