@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.nio.file.Files;
 
-public class FileReport implements Serializable {
+public class FileReport {
 
 	public static void main(String args[])  throws IOException{
 		try {

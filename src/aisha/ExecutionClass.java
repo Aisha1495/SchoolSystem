@@ -40,7 +40,7 @@ public class ExecutionClass {
 
 	
 	FileWriter myWriter = new FileWriter("C:\\Users\\Lenovo\\eclipse-workspace\\aisha\\FileExample.txt");
-
+	
 	while(addDepartment){
 
 		 Department dep = new Department();
@@ -85,34 +85,28 @@ public class ExecutionClass {
 
 			}
 		}
-	
+		 FileOutputStream f = new FileOutputStream(
+					new File("C:\\Users\\Lenovo\\eclipse-workspace\\aisha\\objExample.txt"));
+			ObjectOutputStream o = new ObjectOutputStream(f);
+
 		boolean addStudent = true;
 		while (addStudent) {
 			 Student stud = new Student();
+			
 			 
-
-			 FileOutputStream f = new FileOutputStream(
-						new File("C:\\Users\\Lenovo\\eclipse-workspace\\aisha\\objExample.txt"));
-				ObjectOutputStream o = new ObjectOutputStream(f);
-
-				// Write objects to file
-				o.writeObject(stud);
-
-				o.close();
-				f.close();
-
-				FileInputStream fi = new FileInputStream(
-						new File("C:\\Users\\Lenovo\\eclipse-workspace\\aisha\\objExample.txt"));
-				ObjectInputStream oi = new ObjectInputStream(fi);
-
-				// Read objects
-				Student pr1 = (Student) oi.readObject();
-				pr1.setStudName("Aisha");
-				System.out.println(pr1.getStudName());
-
-				oi.close();
-				fi.close();
-				
+//
+//				FileInputStream fi = new FileInputStream(
+//						new File("C:\\Users\\Lenovo\\eclipse-workspace\\aisha\\objExample.txt"));
+//				ObjectInputStream oi = new ObjectInputStream(fi);
+//
+//				// Read objects
+//				Student pr1 = (Student) oi.readObject();
+//				pr1.setStudName("Aisha");
+//				System.out.println(pr1.getStudName());
+//
+//				oi.close();
+//				fi.close();
+//				
 
 			System.out.println("Enter Student Name:  ");
 			String studName = sc.next();
@@ -121,6 +115,9 @@ public class ExecutionClass {
 			System.out.println("Enter Student id:  ");
 			int studId = sc.nextInt();
 			stud.setStudId(studId);
+			
+			
+			
 
 			System.out.println("Do you want to Enter Other Student? (yes/no):  ");
 			String answer2 = sc.next();
@@ -128,15 +125,24 @@ public class ExecutionClass {
 			if (answer2.equals("yes")) {
 				System.out.println("Next Student:");
 				addStudent = true;
+				
+				// Write objects to file
+				o.writeObject(stud);
 
 			} else if (answer2.equals("no")) {
 				addStudent = false;
 				System.out.println("Course:");
 				break;
+				
+				
 
 			}
-
+	
 		}
+
+		o.close();
+		f.close();
+		
 
 		boolean addCourse = true;
 		while (addCourse) {
@@ -298,5 +304,3 @@ public class ExecutionClass {
 	
 
 }
-
-

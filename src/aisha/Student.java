@@ -11,8 +11,8 @@ public class Student implements Serializable {
 	private int studId;
 	Courses cours = new Courses();
 	
-	ArrayList<Courses> CoursList=new ArrayList<Courses>();
-	
+	//ArrayList<Courses> CoursList=new ArrayList<Courses>();
+	ArrayList<Courses> CoursList;
 	
 	public ArrayList<Courses> getCoursList() {
 		return CoursList;

@@ -1,20 +1,26 @@
 package aisha;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import java.util.Scanner;
 
-public class School {
+public class School  implements Serializable {
 	
 
 	private String nameOfSchool;
 	private String location;
 	
-	School(String name , String Location){
-		System.out.println(name);
-		System.out.println(Location);
-		this.nameOfSchool=name;
-		this.location=Location;
+//	School(String name , String Location){
+//		System.out.println(name);
+//		System.out.println(Location);
+//		this.nameOfSchool=name;
+//		this.location=Location;
+//		
+	    public School(String nameOfSchool, String location) {
+	    	
+	        this.nameOfSchool = nameOfSchool;
+	        this.location = location;
 	}
 	
 

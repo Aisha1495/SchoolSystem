@@ -2,7 +2,7 @@ package aisha;
 
 public class format {
 	
-	format(){
+	public format(){
 		System.out.println("School System");
 	}
 	public static final String ANSI_RESET = "\u001B[0m";
