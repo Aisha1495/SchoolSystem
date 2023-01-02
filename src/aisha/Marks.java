@@ -3,7 +3,17 @@ package aisha;
 import java.io.Serializable;
 import java.util.Scanner;
 
-public class Marks implements Serializable {
+public class Marks implements Serializable ,Interface123,Interface456 {
+	
+	int sum = Interface123.mark+Interface456.mark1;
+	public void disp() {
+		System.out.println("Roll= "+ Interface123.roll);
+	}
+	public void add() {
+		System.out.println("Total Mark = " +sum);
+	}
+	
+	
 	private String SupjMark;
 	private float Mark;
 	char grade;

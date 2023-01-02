@@ -1,9 +1,14 @@
 package aisha;
 
- public interface Interface123 {
+ interface Interface123 {
 	
-	 
-	 public void show(); 
-
-
+	 public static final int mark =100; 
+		int roll = 121;
+		void disp();
+	 }
+interface Interface456 {
+	int mark1 =200;
+	void add();
 }
+
+

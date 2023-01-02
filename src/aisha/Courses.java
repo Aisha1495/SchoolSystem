@@ -10,8 +10,8 @@ public class Courses {
     private Integer courId; //TODO: Use Integer instead of int
 
 
-   // ArrayList<Marks> markList = new ArrayList<Marks>(); //TODO: Format your code
-    ArrayList<Marks> markList;
+    ArrayList<Marks> markList = new ArrayList<Marks>(); //TODO: Format your code
+    //ArrayList<Marks> markList;
     /*
     Why do you have MarksList and Mark object. You are supposed to use only one of them
     */

@@ -1,0 +1,18 @@
+____________________________________________________
+
+Department Name : 1
+Department id: 1
+
+
+____________________________________________________
+Teacher Name: 1
+Teacher id: 1
+
+Student Name: 1
+Student id: 1
+
+Course Name: 1
+Course id: 1
+
+The Grade is  : A
+

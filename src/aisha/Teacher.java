@@ -12,9 +12,9 @@ public class Teacher implements Serializable{
 
 	Student stud = new Student();
 	
-	//ArrayList<Student> StudList=new ArrayList<Student>();
+	ArrayList<Student> StudList=new ArrayList<Student>();
 
-	ArrayList<Student> StudList;
+	//ArrayList<Student> StudList;
 	
 	public ArrayList<Student> getStudList() {
 		return StudList;

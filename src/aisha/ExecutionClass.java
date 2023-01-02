@@ -18,7 +18,6 @@ public class ExecutionClass  {
 
 	public static void main(String[] arg) throws IOException, ClassNotFoundException {
 		
-		
 
 		Stack<String> stk = new Stack<String>();
 

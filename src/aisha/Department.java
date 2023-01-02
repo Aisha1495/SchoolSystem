@@ -3,11 +3,10 @@ package aisha;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Scanner;
 
-public class Department implements Serializable , Interface123 {
+public class Department implements Serializable {
 
-	 public void show() {}
+	
 	
     private String nameOfDep;
     private Integer depNum; // int vs Integer
@@ -16,8 +15,8 @@ public class Department implements Serializable , Interface123 {
 
     //ArrayList<Teacher> TeacherList;
     
-    //ArrayList<Teacher> TeacherList = new ArrayList<>();
-    ArrayList<Teacher> TeacherList;
+    ArrayList<Teacher> TeacherList = new ArrayList<>();
+    //ArrayList<Teacher> TeacherList;
     
     
     // Dont initialize
