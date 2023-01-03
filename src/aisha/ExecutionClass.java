@@ -64,6 +64,44 @@ public class ExecutionClass implements Interface1 {
 		while (addTeacher) {
 
 			 Teacher tech = new Teacher();
+			 
+			 try {
+					Teacher1 tech1 = new  Teacher1("Mrs.Aisha", 1414);
+					Teacher1 tech2 = new  Teacher1("Mr.Rashid", 1515);
+					Teacher1 tech3 = new  Teacher1("Mr.Badr", 1717);
+					
+					FileOutputStream fileOut = new FileOutputStream("Output.txt");
+					ObjectOutputStream out=new ObjectOutputStream(fileOut);
+					
+					out.writeObject(tech1);
+					out.writeObject(tech2);
+					out.writeObject(tech3);
+					out.flush();
+					out.close();
+					System.out.println("Serialiazation and deserlazation is been sucessfully");
+				}
+				catch(Exception e) {
+					System.out.println(e);
+				}
+				
+				try {
+					FileInputStream fileIn=new FileInputStream("Output.txt");
+					ObjectInputStream in = new ObjectInputStream(fileIn);
+							
+							Teacher1 te1= (Teacher1)in.readObject();
+							Teacher1 te2= (Teacher1)in.readObject();
+							Teacher1 te3= (Teacher1)in.readObject();
+							System.out.println("Heads Of Teachers:");
+							System.out.println(te1.techName+" "+ te1.techId);
+							System.out.println(te2.techName+" "+ te2.techId);
+							System.out.println(te3.techName+" "+ te3.techId);
+							in.close();
+				}
+				catch(Exception e){
+					System.out.println(e);
+				}
+			
+			
 
 			System.out.println("Enter Teacher Name:  ");
 			String techName = sc.next();
@@ -88,7 +126,12 @@ public class ExecutionClass implements Interface1 {
 				break;
 
 			}
+			
 		}
+		
+		
+		
+	
 		 FileOutputStream f = new FileOutputStream(
 					new File("C:\\Users\\Lenovo\\eclipse-workspace\\aisha\\objExample.txt"));
 			ObjectOutputStream o = new ObjectOutputStream(f);
@@ -220,9 +263,6 @@ public class ExecutionClass implements Interface1 {
 			addDepartment = false;//''''''''
 
 			
-		
-			
-			
 			
 			// break;
 
@@ -311,7 +351,10 @@ public class ExecutionClass implements Interface1 {
 			System.out.println("No History , Thank you have a nice day");
 		}
 		myWriter.close();
+		
+		
 	}
 	
 
 }
+
